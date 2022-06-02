@@ -1,4 +1,6 @@
+const test = document.querySelector("#weatherMapCarousel")
 const carousel = document.querySelector(".carousel-inner");
+const fragment = document.createDocumentFragment();
 
 const images = [
   "https://www.climate.gov/data/SevereWeather--Daily--Historic-Probability-of-Severe-Weather--CONUS/01-small/SevereWeather--Daily--Historic-Probability-of-Severe-Weather--CONUS--0000-01-02--small.png",
@@ -369,22 +371,28 @@ const images = [
 ];
 
 function addCarouselItem(url) {
-  const div = document.createElement("div");
+  let div = document.createElement("div");
   div.classList.add("carousel-item");
 
-  const img = document.createElement("img");
-  img.classList.add("d-block", "w-75");
+  let img = document.createElement("img");
+  img.classList.add("d-block", "w-50");
   img.setAttribute("alt", "weather chart");
   img.setAttribute("src", url);
 
   div.appendChild(img);
-  carousel.appendChild(div);
+  fragment.appendChild(div);
 }
 
-// for (i = 0; i < images.length; i++) {
-//   addCarouselItem(images[i]);
-// }
+function createCarousel() {
+  images.forEach((url) => {
+    addCarouselItem(url);
+  });
 
-images.forEach(url => {
-    addCarouselItem(url)
-})
+  carousel.appendChild(fragment);
+}
+
+createCarousel();
+
+// document.querySelector("#OctBtn").addEventListener("click", function() {
+//   carousel.carousel(300)
+// })
