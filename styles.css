@@ -7,7 +7,7 @@ body {
     padding: 1%;
 }
 
-.header, img, .footer {
+.header, img, .footer, .indicators {
     margin-right: auto;
     margin-left: auto;
     margin-top: 1%;
@@ -15,4 +15,8 @@ body {
 
 h2 {
     margin-left: 33%;
+}
+
+button {
+    opacity: 20%;
 }

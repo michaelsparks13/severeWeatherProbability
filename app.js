@@ -1,4 +1,4 @@
-const test = document.querySelector("#weatherMapCarousel")
+const test = document.querySelector("#weatherMapCarousel");
 const carousel = document.querySelector(".carousel-inner");
 const fragment = document.createDocumentFragment();
 
@@ -396,3 +396,43 @@ createCarousel();
 // document.querySelector("#OctBtn").addEventListener("click", function() {
 //   carousel.carousel(300)
 // })
+
+$(document).ready(function () {
+  
+  $("#JanBtn").click(function () {
+    $("#weatherMapCarousel").carousel(0);
+  });
+  $("#FebBtn").click(function () {
+    $("#weatherMapCarousel").carousel(31);
+  });
+  $("#MarBtn").click(function () {
+    $("#weatherMapCarousel").carousel(60);
+  });
+  $("#AprilBtn").click(function () {
+    $("#weatherMapCarousel").carousel(91);
+  });
+  $("#MayBtn").click(function () {
+    $("#weatherMapCarousel").carousel(121);
+  });
+  $("#JunBtn").click(function () {
+    $("#weatherMapCarousel").carousel(152);
+  });
+  $("#JulBtn").click(function () {
+    $("#weatherMapCarousel").carousel(182);
+  });
+  $("#AugBtn").click(function () {
+    $("#weatherMapCarousel").carousel(213);
+  });
+  $("#SepBtn").click(function () {
+    $("#weatherMapCarousel").carousel(244);
+  });
+  $("#OctBtn").click(function () {
+    $("#weatherMapCarousel").carousel(274);
+  });
+  $("#NovBtn").click(function () {
+    $("#weatherMapCarousel").carousel(305);
+  });
+  $("#DecBtn").click(function () {
+    $("#weatherMapCarousel").carousel(335);
+  });
+});
